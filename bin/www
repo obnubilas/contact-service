@@ -14,7 +14,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000'); //lee desde aqui
+var port = normalizePort(process.env.PORT || '3000'); //lee el puerto desde el PORT y lo configura
 app.set('port', port);
 
 /**
@@ -28,7 +28,7 @@ var server = http.createServer(app);
  */
 
 server.listen(port);
-server.on('error', onError);
+server.on('error', onError); //Si hay un error
 server.on('listening', onListening);
 
 /**
@@ -84,7 +84,7 @@ function onError(error) {
  * 
  */
 
-function onListening() {
+function onListening() { //cuando dice que está escuchando
   var addr = server.address();
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
