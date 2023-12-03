@@ -21,7 +21,7 @@ metadata:
       terminationGracePeriodSeconds: 0
       containers:
         - name: contacts
-          image: {{ .Values.contacts.image }}
+          image: {{ .Values.contacts.image}}
           ports:
             - name: http
               containerPort: 3000
