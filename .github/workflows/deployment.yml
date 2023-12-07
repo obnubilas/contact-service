@@ -23,7 +23,6 @@ jobs:
         with:
           namespace: eventhub-user-obnubilas
           build: true
-        
       
       
 
