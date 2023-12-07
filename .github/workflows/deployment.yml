@@ -12,7 +12,7 @@ jobs:
     - name: Okteto Login
       uses: okteto/login@latest
       with:
-        token: $({secrets.OKTETO_TOKEN})
+        token: ${{ secrets.OKTETO_TOKEN }}
 
     - name: Okteto Deploy
       uses: resinas/okteto-push@v1.0.2
